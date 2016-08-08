@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title>
+      编辑
+    </ion-title>
+    <ion-buttons end>
+      <button royal block (click)="updataSchoolInfo()">
+        保存
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #f4f4f4">
+  <div padding>
+    <ion-item>
+      <ion-label>请选择学校</ion-label>
+      <ion-select [(ngModel)]="school">
+        <ion-option value="1">贵州财经大学(花溪校区)</ion-option>
+        <ion-option value="2">贵州医科大学(花溪校区)</ion-option>
+        <ion-option value="3">贵州师范大学(花溪校区)</ion-option>
+        <ion-option value="4">贵州城市学院(花溪校区)</ion-option>
+        <ion-option value="5">贵州轻工职业技术学院</ion-option>
+        <ion-option value="6">贵州民族大学花溪校区(花溪校区)</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title>
+      任务申诉
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #f4f4f4">
+  <div padding>
+    <ion-item>
+      <ion-label primary>申诉单号</ion-label>
+      <ion-input type="text" placeholder="可在您的订单详情页面查看" [(ngModel)]="tastId"></ion-input>
+    </ion-item>
+  </div>
+
+  <div padding>
+    <p>申诉内容</p>
+    <ion-item>
+      <ion-label stacked>请输入申诉内容</ion-label>
+      <ion-textarea [(ngModel)]="appealReason"></ion-textarea>
+    </ion-item>
+    <p>提示：如对任务有任何疑问，可首先联系任务领取人协商解决。如遇到任务领取人无法联系或者拒绝协商，可提交如上申请至顺带服务中心，顺带客服将在2个工作日处理解决。</p>
+  </div>
+
+  <div padding margin-bottom>
+    <button full danger round (click)="submitAppeal()">
+      <ion-icon name="hammer"></ion-icon>
+      提交申诉
+    </button>
+  </div>
+
+</ion-content>
+

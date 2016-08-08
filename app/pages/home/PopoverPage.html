@@ -1,0 +1,45 @@
+<ion-list radio-group>
+  <ion-list-header>
+    学校
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>贵州财经大学</ion-label>
+    <ion-radio checked="true" value="go"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>贵州师范大学</ion-label>
+    <ion-radio value="rust"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>贵州医科大学</ion-label>
+    <ion-radio value="python"></ion-radio>
+  </ion-item>
+</ion-list>
+
+<ion-list radio-group>
+  <ion-list-header>
+    快递公司
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>申通快递</ion-label>
+    <ion-radio checked="true" value="go"></ion-radio>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>顺丰快递</ion-label>
+    <ion-radio value="python"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>京东快递</ion-label>
+    <ion-radio value="python"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>其他</ion-label>
+    <ion-radio value="python"></ion-radio>
+  </ion-item>
+</ion-list>
+<button full secondary round (click)="close()" (click)="presentLoadingDefault()">确定</button>

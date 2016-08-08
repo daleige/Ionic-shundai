@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title>任务发布</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #f4f4f4" ionic.Platform.isFullScreen=true>
+  <ion-list>
+    <ion-item>
+      <ion-label>姓名</ion-label>
+      <ion-input type="text" [(onModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>手机</ion-label>
+      <ion-input type="text" [(ngModel)]="receive_express_phone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>学校</ion-label>
+      <ion-select [(ngModel)]="school_code">
+        <ion-option value="1">贵州财经大学(花溪校区)</ion-option>
+        <ion-option value="2">贵州医科大学(花溪校区)</ion-option>
+        <ion-option value="3">贵州师范大学(花溪校区)</ion-option>
+        <ion-option value="4">贵州城市学院(花溪校区)</ion-option>
+        <ion-option value="5">贵州轻工职业技术学院</ion-option>
+        <ion-option value="6">贵州民族大学花溪校区(花溪校区)</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>快递公司</ion-label>
+      <ion-select [(ngModel)]="express_code">
+        <ion-option value="1">韵达快递</ion-option>
+        <ion-option value="2">申通快递</ion-option>
+        <ion-option value="3">顺丰快递</ion-option>
+        <ion-option value="4">EMS</ion-option>
+        <ion-option value="5">圆通快递</ion-option>
+        <ion-option value="6">中通快递</ion-option>
+        <ion-option value="7">百世汇通</ion-option>
+        <ion-option value="8">京东</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <p margin>领取短信</p>
+  <ion-card-content>
+    <ion-item>
+      <ion-label stacked>双击输入区可调用系统短信</ion-label>
+      <ion-textarea [(ngModel)]="msg" [(ngModel)]="express_info"></ion-textarea>
+    </ion-item>
+  </ion-card-content>
+  <ion-item>
+    <ion-input type="text" placeholder="收货地址" [(ngModel)]="receive_address"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" placeholder="请输入任务悬赏金额" [(ngModel)]="expect_money"></ion-input>
+  </ion-item>
+  <div padding>
+    <button full danger round (click)="submitFaBu()">
+      <ion-icon name="add"></ion-icon>
+      发布
+    </button>
+  </div>
+</ion-content>

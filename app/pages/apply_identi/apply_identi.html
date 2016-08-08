@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title>
+      信息认证
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>姓名</ion-label>
+      <ion-input type="text" placeholder="请填写真实姓名" [(ngModel)]="tureName"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>学号</ion-label>
+      <ion-input type="text" placeholder="请填写本人学号" [(ngModel)]="studentId"></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>身份证号码</ion-label>
+      <ion-input type="text" placeholder="填写二代身份证号码" [(ngModel)]="identifyId"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>学校</ion-label>
+      <ion-select [(ngModel)]="schoolCode">
+        <ion-option value="1">贵州财经大学(花溪校区)</ion-option>
+        <ion-option value="2">贵州医科大学(花溪校区)</ion-option>
+        <ion-option value="3">贵州师范大学(花溪校区)</ion-option>
+        <ion-option value="4">贵州城市学院(花溪校区)</ion-option>
+        <ion-option value="5">贵州轻工职业技术学院</ion-option>
+        <ion-option value="6">贵州民族大学花溪校区(花溪校区)</ion-option>
+      </ion-select>
+    </ion-item>
+    <!--<ion-item>-->
+    <!--<ion-label>宿舍楼</ion-label>-->
+    <!--<ion-input type="text"></ion-input>-->
+    <!--</ion-item>-->
+    <!--<ion-item>-->
+    <!--<ion-label>房间号</ion-label>-->
+    <!--<ion-input type="text"></ion-input>-->
+    <!--</ion-item>-->
+
+  </ion-list>
+
+  <div padding>
+    <button danger round full (click)="submitInfo()">提交</button>
+  </div>
+</ion-content>

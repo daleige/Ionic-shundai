@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title>
+      用户注册
+    </ion-title>
+    <ion-buttons end>
+      <button block (click)="goToSetPasswordPage()">
+        下一步
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label primary fixed>手机</ion-label>
+      <ion-input type="tel" [(ngModel)]="inputPhoneNumber"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label primary fixed>验证码</ion-label>
+      <ion-input type="tel" [(ngModel)]="inputYZM"></ion-input>
+      <ion-avatar item-right>
+        <button id="btnExcel" secondary round (click)="sendYZM(60)">{{btnText}}</button>
+      </ion-avatar>
+    </ion-item>
+
+  </ion-list>
+
+
+</ion-content>
+

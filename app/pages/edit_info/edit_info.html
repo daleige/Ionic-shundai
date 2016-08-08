@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title>
+      编辑
+    </ion-title>
+    <ion-buttons end>
+      <button royal block (click)="updataUserInfo()">
+        保存
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #f4f4f4">
+  <div padding>
+    <ion-list>
+      <ion-item>
+        <ion-label>{{hintContent}}</ion-label>
+        <ion-input type="text" [(ngModel)]="data"></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

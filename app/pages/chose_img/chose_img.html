@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title>
+      头像
+    </ion-title>
+    <ion-buttons end (click)="choseUserHeadImg()">
+      <button royal>
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #000000">
+    <!--<img src="images/user_head.jpg" style="width: 100%;height: 60%;margin-top: 25%;">-->
+  <img src="{{img_url}}" style="width: 100%;height: 60%;margin-top: 25%;">
+</ion-content>

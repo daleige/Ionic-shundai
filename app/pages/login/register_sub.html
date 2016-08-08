@@ -1,0 +1,23 @@
+<ion-header >
+  <ion-navbar secondary>
+    <ion-title>
+      设置密码
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label primary fixed>密码</ion-label>
+      <ion-input type="tel" placeholder="密码长度不应小于6位数" [(ngModel)]="password_1"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label primary fixed>密码</ion-label>
+      <ion-input type="tel" placeholder="请再次输入密码" [(ngModel)]="password_2"></ion-input>
+    </ion-item>
+    <p style="color: #5677FC;" margin>注册表示您同意使用“顺带”使用协议和服务条款</p>
+  </ion-list>
+
+  <button full danger Round (click)="register()">注册</button>
+
+</ion-content>

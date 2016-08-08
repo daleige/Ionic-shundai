@@ -1,0 +1,76 @@
+<ion-header hide-nav-bar="true">
+  <ion-navbar secondary>
+    <ion-title>任务详情</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color: #f4f4f4">
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="{{img_url}}">
+      </ion-avatar>
+      <h2>{{name}}</h2>
+      <p>任务编号：{{tastId}}</p>
+    </ion-item>
+    <ion-card-content>
+      <hr>
+      <br>
+      <p>手机号码：{{phone}}</p>
+      <br>
+      <p>快递公司：{{kuaidiGS}}</p>
+      <br>
+      <p>校区：{{schoolName}}</p>
+      <br>
+      <p>收货地址：{{address}}</p>
+      <br>
+      <p>
+        <a>取件短信：</a>
+        <a>{{kuaidiDX}}</a>
+      </p>
+      <hr>
+
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <p>任务进度</p>
+
+      <ion-item>
+        <ion-icon name='attach' item-left></ion-icon>
+        <p>您的任务已发，等待领取</p>
+        <ion-note item-right>
+          2017-6-30 08：34
+        </ion-note>
+      </ion-item>
+      <hr>
+      <ion-item>
+        <ion-icon name='attach' item-left></ion-icon>
+        <p>认证用户张三(1383838438)领取您的任务</p>
+        <ion-note item-right>
+          2017-6-30 09：10
+        </ion-note>
+      </ion-item>
+      <hr>
+      <ion-item>
+        <ion-icon name='attach' item-left></ion-icon>
+        <p>认证用户张三正在为你派件至送货地址</p>
+        <ion-note item-right>
+          2017-6-30 12：30
+        </ion-note>
+      </ion-item>
+      <hr>
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <div margin>
+    <button full danger round (click)="goTastAppealPage()" >
+      <ion-icon name="hammer"></ion-icon>
+      申诉
+    </button>
+    <p>如对任务有任何疑问可提交申诉至顺带服务中心</p>
+  </div>
+</ion-content>

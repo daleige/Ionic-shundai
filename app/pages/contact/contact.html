@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar secondary style="text-align: center">
+    <ion-title>
+      个人中心
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #f4f4f4">
+  <div id="frist_div" style="width: 100% ;height: 45%;">
+    <img src="images/person_bg.jpg" style="width: 100% ;height: 100%">
+    <!--<img id="head_img" src="images/user_head.jpg">-->
+    <img id="head_img" src="{{img_url}}">
+    <h4 class="user_text"><strong>木头同学</strong></h4>
+  </div>
+  <br>
+  <ion-list>
+    <button ion-item (click)="showBaseInfo()">
+      <ion-icon name="contact" item-left></ion-icon>
+      个人信息
+    </button>
+
+    <button ion-item (click)="showApplyIdenti()">
+      <ion-icon name="information-circle" item-left></ion-icon>
+      申请认证
+    </button>
+
+    <button ion-item (click)="showTastAppeal()">
+      <ion-icon name="hammer" item-left></ion-icon>
+      任务申诉
+    </button>
+
+    <button ion-item (click)="showAboutShunDai()">
+      <ion-icon name="mail-open" item-left></ion-icon>
+      关于顺带
+    </button>
+  </ion-list>
+
+  <div margin>
+    <button full round danger (click)="exit()">退出账号</button>
+  </div>
+</ion-content>

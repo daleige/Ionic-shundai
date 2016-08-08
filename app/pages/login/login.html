@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title>登录</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>用户名</ion-label>
+      <ion-input type="text" [(ngModel)]="username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>密码</ion-label>
+      <ion-input type="password" [(ngModel)]="password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button full danger Round (click)="login()">登录</button>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button secondary outline small style="float: right" (click)="goToRegister()">用户注册</button>
+        <!--<button secondary outline small style="float: right" (click)="forgetPassword()">忘记密码</button>-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

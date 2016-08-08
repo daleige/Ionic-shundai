@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar secondary>
+    <ion-title>
+      个人信息
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content style="background-color: #f4f4f4">
+  <ion-list>
+    <ion-item-sliding (click)="showChoseImgPage()">
+      <ion-item>
+        <h2>{{username}}</h2>
+        <ion-avatar item-right>
+          <img src="{{img_url}}">
+        </ion-avatar>
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item (click)="showEditInfoPage('1')">
+      <ion-icon name="at" item-left></ion-icon>
+      姓名
+      <p item-right>{{username}}</p>
+    </button>
+
+    <button ion-item (click)="updataPhone()">
+      <ion-icon name="phone-portrait" item-left></ion-icon>
+      手机
+      <p item-right>{{phone}}</p>
+    </button>
+
+    <button ion-item (click)="showEditSchoolPage()">
+      <ion-icon name="school" item-left></ion-icon>
+      学校
+      <p item-right>{{school}}</p>
+    </button>
+    <button ion-item (click)="showEditInfoPage('4')">
+      <ion-icon name="compass" item-left></ion-icon>
+      具体楼层地址
+      <p item-right>{{address}}</p>
+    </button>
+  </ion-list>
+</ion-content>

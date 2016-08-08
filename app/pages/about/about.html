@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar secondary>
+    <ion-segment light [(ngModel)]="pet">
+      <ion-segment-button value="puppies">
+        我发布的
+      </ion-segment-button>
+      <ion-segment-button value="hot">
+        我领取的
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<!--通过绑定View控制页面切换-->
+<ion-content class="about" style="background-color: #f4f4f4" hide-tabs>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="下拉刷新"
+      refreshingSpinner="circles"
+      refreshingText="数据加载中...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <div [ngSwitch]="pet">
+
+
+    <ion-list *ngSwitchCase="'puppies'">
+      <ion-item-sliding *ngFor="let item of items1">
+
+        <ion-item>
+          <ion-avatar item-left>
+            <img src="{{item.img_src}}">
+          </ion-avatar>
+          <h2>{{item.nick}}</h2>
+          <p>{{item.express_name}}</p>
+          <p>{{item.receive_address}}</p>
+          <button clear item-right (click)="showOrderInfor($event,item)">查看详情</button>
+        </ion-item>
+
+        <ion-item-options>
+          <button secondary (click)='showOrderInfor($event,item)'>
+            <ion-icon name="eye"></ion-icon>
+            查看任务
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'hot'">
+      <ion-item-sliding *ngFor="let item of items2">
+
+        <ion-item>
+          <ion-avatar item-left>
+            <!--<img src="images/user_head.jpg">-->
+            <img src="{{item.img_src}}">
+          </ion-avatar>
+          <h2>{{item.launch_user_nick}}</h2>
+          <p>{{item.express_name}}</p>
+          <p>{{item.receive_address}}</p>
+          <button clear item-right (click)="showOrderInfor($event,item)">查看详情</button>
+        </ion-item>
+
+        <ion-item-options>
+          <button secondary (click)='showOrderInfor($event,item)'>
+            <ion-icon name="eye"></ion-icon>
+            查看任务
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+

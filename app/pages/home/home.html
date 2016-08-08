@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-navbar style="text-align: center" secondary>
+    <button menuToggle (click)="presentPopover($event)">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      首页
+    </ion-title>
+      <button menuToggle end (click)="showIssuerPage()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="home" style="background-color: #f4f4f4">
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="下拉刷新"
+      refreshingSpinner="circles"
+      refreshingText="数据加载中...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-slides  #mySlider  [options]="mySlideOptions" style="width: 100%;height:35% ">
+    <ion-slide>
+      <img src="images/banner1.png">
+    </ion-slide>
+    <ion-slide>
+      <img src="images/banner2.png">
+    </ion-slide>
+  </ion-slides>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of items">
+      <ion-item>
+        <ion-avatar item-left>
+          <img src="{{item.src}}">
+        </ion-avatar>
+        <h2>{{item.name}}</h2>
+        <p>{{item.KDName}}</p>
+        <p>{{item.address}}</p>
+        <button clear item-right (click)='shwoTastInfo($event,item)'>领取</button>
+      </ion-item>
+
+      <ion-item-options>
+        <button secondary (click)='shwoTastInfo($event,item)'>
+          <ion-icon name="bicycle"></ion-icon>
+          领取任务
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
