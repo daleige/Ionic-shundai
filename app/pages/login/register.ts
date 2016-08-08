@@ -12,8 +12,8 @@ export class RegisterPage {
   public inputPhoneNumber: number;
   public inputYZM: string = '';
   private checkNumberUrl: string = "http://119.29.140.85/index.php/user/check_phone";
-  private requestYZMUrl: string = 'http://119.29.140.85/index.php/user/request_msg';
-  private checkYZMUrl: string = 'http://119.29.140.85/index.php/user/valite_msg_code';
+  private requestYZMUrl: string = '*******************************************';
+  private checkYZMUrl: string = '******************************';
   loading = Loading.create({
     content: ''
   });
