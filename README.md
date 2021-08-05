@@ -1,5 +1,7 @@
  *  ### 简介:
-    - 1.基于Ionic版本2开发的校园代领快递APP，开发语言Typescript+ES6+AngularJS2，本科期间参加比赛作品
+  大三在校期间参加比赛的作品
+  
+    - 1.基于Ionic版本2开发的校园代领快递APP，开发语言Typescript+ES6+AngularJS2，
     - 2.项目中用大了大部分Ionic组件，和图片选择、拍照、文件上传、系统浏览器等
     - 3.Ionic现已经更新到版本4，此项目停止维护
     
